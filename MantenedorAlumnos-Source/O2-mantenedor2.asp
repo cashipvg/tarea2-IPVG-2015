@@ -1,20 +1,23 @@
 <%Set Conn= Server.CreateObject("ADODB.connection")
-Conn.Open = "dsn=mantencion;uid=invitado;pwd=pass;"
+Conn.Open = "dsn=dsnalumnos;uid=invitado;pwd=2015;"
 	RUT = REQUEST.QUERYSTRING("RUT") 		
 	NOMBRES = REQUEST.QUERYSTRING("NOMBRES")
 	MAIL = REQUEST.QUERYSTRING("MAIL")
+	DIRECCION = REQUEST.QUERYSTRING("DIRECCION")
 	
-	if (RUT<>"") then
+	
+	if (RUT<>"", NOMBRES<>"", MAIL<>"", DIRECCION<>"") then
 	
 	
-	SQL = "INSERT INTO mantencion.dbo.alumnos " & _
-				"(RUT, NOMBRES, MAIL) " & _
+	SQL = "INSERT INTO dbo.alumnos " & _
+				"(RUT, NOMBRE, MAIL, DIRECCION) " & _
 				"VALUES " & _
-				"('" & RUT & "', '" & NOMBRES & "', '" & CORREO & "')" 
+				"('" & RUT & "', '" & NOMBRES & "', '" & CORREO & "', '" & DIRECCION &"')" 
 			Conn.execute(SQL)
 			RUT = ""
 			NOMBRES = ""
 			MAIL = ""
+			DIRECCION = ""
 	end if
 %>
 
