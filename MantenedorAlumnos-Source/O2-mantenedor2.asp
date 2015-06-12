@@ -1,5 +1,5 @@
 <%Set Conn= Server.CreateObject("ADODB.connection")
-Conn.Open = "dsn=dsnalumnos;uid=invitado;pwd=2015;"
+Conn.Open = "dsn=dsnalumnos;uid=invitado;pwd=2015;database=mantencion"
 	RUT = REQUEST.QUERYSTRING("RUT") 		
 	NOMBRES = REQUEST.QUERYSTRING("NOMBRES")
 	MAIL = REQUEST.QUERYSTRING("MAIL")
@@ -37,7 +37,7 @@ function volver()
 
 <body>
 
-<form method="get" action="02-mantenedor2.asp" name="form1">
+<form method="get" action="O2-mantenedor2.asp" name="form1">
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#c0c0c0">
              
     <tr align="center" valign="middle"> 
