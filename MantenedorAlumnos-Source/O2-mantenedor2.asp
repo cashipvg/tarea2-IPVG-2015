@@ -27,8 +27,8 @@ Conn.Open = "dsn=dsnalumnos;uid=invitado;pwd=2015;"
 <script language="javascript">
 function volver()
 {
-	document.form1.action="mantenedor1.asp"
-	document.form1.submit();
+	document.location.href="01-mantenedor1.asp"
+	
 }
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
@@ -37,7 +37,7 @@ function volver()
 
 <body>
 
-<form method="get" action="mantenedor2.asp" name="form1">
+<form method="get" action="02-mantenedor2.asp" name="form1">
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#c0c0c0">
              
     <tr align="center" valign="middle"> 
