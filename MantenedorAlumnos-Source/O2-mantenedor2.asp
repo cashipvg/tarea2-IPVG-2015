@@ -12,7 +12,7 @@ Conn.Open = "dsn=dsnalumnos;uid=invitado;pwd=2015;database=mantencion"
 	SQL = "INSERT INTO dbo.alumnos " & _
 				"(RUT, NOMBRE, MAIL, DIRECCION) " & _
 				"VALUES " & _
-				"('" & RUT & "', '" & NOMBRES & "', '" & CORREO & "', '" & DIRECCION &"')" 
+				"('" & RUT & "', '" & NOMBRES & "', '" & MAIL & "', '" & DIRECCION &"')" 
 			Conn.execute(SQL)
 			RUT = ""
 			NOMBRES = ""
@@ -27,7 +27,7 @@ Conn.Open = "dsn=dsnalumnos;uid=invitado;pwd=2015;database=mantencion"
 <script language="javascript">
 function volver()
 {
-	document.location.href="01-mantenedor1.asp"
+	document.location.href="O2-mantenedor1.asp"
 	
 }
 </script>
@@ -43,6 +43,7 @@ function volver()
     <tr align="center" valign="middle"> 
         <td height="25" colspan="6" nowrap bordercolor="#FFFFFF" bgcolor="#FFFFFF"><b><font face="Verdana,Arial, Helvetica, sans-serif" size="1">RUT 
                 <input type="text" name="RUT" maxlength="5" size="15" class="texto">
+				<br>
                 <font face="Verdana, Arial, Helvetica, sans-serif">NOMBRES</font> 
                 <input type="text" name="NOMBRES" size="60" maxlength="50" class="texto">
                 </font></b></td>
@@ -51,7 +52,11 @@ function volver()
               <td height="25" colspan="6" nowrap bordercolor="#FFFFFF" bgcolor="#FFFFFF"><b><font face="Arial, Helvetica, sans-serif" size="1"><font face="Verdana, Arial, Helvetica, sans-serif">MAIL</font> 
                 <input type="text" name="MAIL" size="60" maxlength="50" class="texto">              
                 
-                </font></b></td>
+                </font></b><
+				<br>
+                <font face="Verdana, Arial, Helvetica, sans-serif">DIRECCION</font> 
+                <input type="text" name="DIRECCION" size="60" maxlength="50" class="texto">
+				</td>
             </tr>
           </table>
 		  <input type="submit" value="Insertar">
