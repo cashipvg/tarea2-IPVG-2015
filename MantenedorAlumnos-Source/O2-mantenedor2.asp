@@ -6,7 +6,7 @@ Conn.Open = "dsn=dsnalumnos;uid=invitado;pwd=2015;database=mantencion"
 	DIRECCION = REQUEST.QUERYSTRING("DIRECCION")
 	
 	
-	if (RUT<>"", NOMBRES<>"", MAIL<>"", DIRECCION<>"") then
+	if (RUT<>"" and NOMBRES<>"" and MAIL<>"" and DIRECCION<>"") then
 	
 	
 	SQL = "INSERT INTO dbo.alumnos " & _
