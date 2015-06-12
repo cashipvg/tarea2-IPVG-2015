@@ -13,7 +13,7 @@ SQL = "SELECT * FROM dbo.alumnos " & _
 </head>
 
 <body>
-<form method="get" action="mantenedor2.asp" name="form1">
+<form method="get" action="02-mantenedor2.asp" name="form1">
  <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr align="center" valign="middle"> 
               <td width="10%" height="10" bgcolor="#ffffff"></td>
@@ -34,6 +34,9 @@ SQL = "SELECT * FROM dbo.alumnos " & _
               <td width="34%" valign=top> 
                 <div align="center"><b><font size="1" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif">MAIL</font></b></div>
               </td>
+			  <td width="34%" valign=top> 
+                <div align="center"><b><font size="1" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif">DIRECCION</font></b></div>
+              </td>
              
             </tr>
             <% 
@@ -53,6 +56,11 @@ SQL = "SELECT * FROM dbo.alumnos " & _
               <td width="34%" valign=top> 
                 <div align="left"><font face="Arial, Helvetica, sans-serif" size="1">
 					<%=REG1("MAIL")%>
+				</font></div>
+              </td>
+			  <td width="34%" valign=top> 
+                <div align="left"><font face="Arial, Helvetica, sans-serif" size="1">
+					<%=REG1("DIRECCION")%>
 				</font></div>
               </td>
             </tr>
